@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  .holder {
+    width: 90%;
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  p {
+    font-size: 60px;
+  }
+  .answer {
+    background: transparent;
+    backdrop-filter: blur(7px);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+  }
+  .botton {
+    width: 40%;
+    height: 40px;
+    font-size: 16px;
+    background: white;
+    border: 2px solid green;
+  }
+  .botton:hover {
+    background: green;
+    color: white;
+  }
+  .img {
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+</style>
+</head>
+<center>
+<body>
+  <div class="holder">
+    <p>How many megabits in gigabit ?</p>
+    <input class="botton" type="button" value="Answer" onclick="aa()">
+    <div id="imgop" class="answer" style="display:none;">
+      <p class="img">1024 MB</p>
+    </div>
+  </div>
+<script>
+function aa() {
+  document.getElementById('imgop').style.display = "block";
+}
+</script>
+
+</body>
+</center>
+</html>

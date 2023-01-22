@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<head>
+  <title>Ice Breaker</title>
+</head>
+  <style>
+    html {
+      overflow: hidden;
+    }
+    body {
+      overflow: hidden;
+    }
+    img{
+      padding: 0.5% 0.5%;
+      border: none;
+      overflow: hidden;
+    }
+    img:hover{
+      cursor: pointer;
+      background: rgba(35,255, 30, 0.7);
+    }
+    .gameplay {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      padding: 0px;
+      margin: 0px;
+      z-index: 2;
+    }
+    .gameloopy {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      z-index: 3;
+    }
+    .back{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 2px solid blue;
+      background: white;
+      font-size: 32px;
+    }
+    .back:hover{
+      background: blue;
+      color: white;
+      cursor: pointer;
+    }
+    .frame {
+      border: none;
+      background: white;
+    }
+    .holder2 {
+      width: 50.5px;
+      height: 50.5px;
+      z-index: 6;
+    }
+    #IMG2 {
+      position: relative;
+      animation-name: upwe;
+      animation-duration: 1s;
+      z-index: 6;
+    }
+    @keyframes upwe {
+      0% {opacity: 1;}
+      100% {opacity: 0;}
+    }
+  </style>
+  <body class="hoster2">
+    <div style="display:flex;">
+      <img id="I01" src="img/01.jpg" width="15.60%" height="80%" onclick="a01()">
+      <img id="I02" src="img/02.jpg" width="15.60%" height="80%" onclick="a02()">
+      <img id="I03" src="img/03.jpg" width="15.60%" height="80%" onclick="a03()">
+      <img id="I04" src="img/04.jpg" width="15.60%" height="80%" onclick="a04()">
+      <img id="I05" src="img/05.jpg" width="15.60%" height="80%" onclick="a05()">
+      <img id="I06" src="img/06.jpg" width="15.60%" height="80%" onclick="a06()">
+    </div>
+    <div  style="display:flex;">
+      <img id="I07" src="img/07.jpg" width="15.60%" height="80%" onclick="a07()">
+      <img id="I08" src="img/08.jpg" width="15.60%" height="80%" onclick="a08()">
+      <img id="I09" src="img/09.jpg" width="15.60%" height="80%" onclick="a09()">
+      <img id="I10" src="img/10.jpg" width="15.60%" height="80%" onclick="a10()">
+      <img id="I11" src="img/11.jpg" width="15.60%" height="80%" onclick="a11()">
+      <img id="I12" src="img/12.jpg" width="15.60%" height="80%" onclick="a12()">
+    </div>
+    <div  style="display:flex;">
+      <img id="I13" src="img/13.jpg" width="15.60%" height="80%" onclick="a13()">
+      <img id="I14" src="img/14.jpg" width="15.60%" height="80%" onclick="a14()">
+      <img id="I15" src="img/15.jpg" width="15.60%" height="80%" onclick="a15()">
+      <img id="I16" src="img/16.jpg" width="15.60%" height="80%" onclick="a16()">
+      <img id="I17" src="img/17.jpg" width="15.60%" height="80%" onclick="a17()">
+      <img id="I18" src="img/18.jpg" width="15.60%" height="80%" onclick="a18()">
+    </div>
+    <div  style="display:flex;">
+      <img id="I19" src="img/19.jpg" width="15.60%" height="80%" onclick="a19()">
+      <img id="I20" src="img/20.jpg" width="15.60%" height="80%" onclick="a20()">
+      <img id="I21" src="img/21.jpg" width="15.60%" height="80%" onclick="a21()">
+      <img id="I22" src="img/22.jpg" width="15.60%" height="80%" onclick="a22()">
+      <img id="I23" src="img/23.jpg" width="15.60%" height="80%" onclick="a23()">
+      <img id="I24" src="img/24.jpg" width="15.60%" height="80%" onclick="a24()">
+    </div>
+    <div id="gameviewer" class="gameplay" style="display:none;">
+      <iframe class="frame" src="" name="iframe_b" width="100%" height="99.9%"></iframe>
+      <div class="gameloopy">
+        <input class="back" type="button" value="Back" onclick="back()">
+      </div>
+    </div>
+    <div style="display:none;">
+      <input type="text" id="X01" value="0">
+      <input type="text" id="Y01" value="0">
+      <a id="b01" href="game/01.html" target="iframe_b"></a>
+      <a id="b02" href="game/02.html" target="iframe_b"></a>
+      <a id="b03" href="game/03.html" target="iframe_b"></a>
+      <a id="b04" href="game/04.html" target="iframe_b"></a>
+      <a id="b05" href="game/05.html" target="iframe_b"></a>
+      <a id="b06" href="game/06.html" target="iframe_b"></a>
+      <a id="b07" href="game/07.html" target="iframe_b"></a>
+      <a id="b08" href="game/08.html" target="iframe_b"></a>
+      <a id="b09" href="game/09.html" target="iframe_b"></a>
+      <a id="b10" href="game/10.html" target="iframe_b"></a>
+      <a id="b11" href="game/11.html" target="iframe_b"></a>
+      <a id="b12" href="game/12.html" target="iframe_b"></a>
+      <a id="b13" href="game/13.html" target="iframe_b"></a>
+      <a id="b14" href="game/14.html" target="iframe_b"></a>
+      <a id="b15" href="game/15.html" target="iframe_b"></a>
+      <a id="b16" href="game/16.html" target="iframe_b"></a>
+      <a id="b17" href="game/17.html" target="iframe_b"></a>
+      <a id="b18" href="game/18.html" target="iframe_b"></a>
+      <a id="b19" href="game/19.html" target="iframe_b"></a>
+      <a id="b20" href="game/20.html" target="iframe_b"></a>
+      <a id="b21" href="game/21.html" target="iframe_b"></a>
+      <a id="b22" href="game/22.html" target="iframe_b"></a>
+      <a id="b23" href="game/23.html" target="iframe_b"></a>
+      <a id="b24" href="game/24.html" target="iframe_b"></a>
+      <a id="b25" href="game/25.html" target="iframe_b"></a>
+    </div>
+    <div class="holder2" id="up2" style="display:none;">
+      <img id="IMG2" src="img/heart.png" width="50px" height="50px" style="display:none;">
+    </div>
+  </body>
+  <script>
+  function a01() {
+    document.getElementById("I01").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I01").style.cursor = "not-allowed";
+    document.getElementById("I01").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b01').click();
+  }
+  function a02() {
+    document.getElementById("I02").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I02").style.cursor = "not-allowed";
+    document.getElementById("I02").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b02').click();
+  }
+  function a03() {
+    document.getElementById("I03").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I03").style.cursor = "not-allowed";
+    document.getElementById("I03").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b03').click();
+  }
+  function a04() {
+    document.getElementById("I04").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I04").style.cursor = "not-allowed";
+    document.getElementById("I04").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b04').click();
+  }
+  function a05() {
+    document.getElementById("I05").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I05").style.cursor = "not-allowed";
+    document.getElementById("I05").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b05').click();
+  }
+  function a06() {
+    document.getElementById("I06").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I06").style.cursor = "not-allowed";
+    document.getElementById("I06").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b06').click();
+  }
+  function a07() {
+    document.getElementById("I07").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I07").style.cursor = "not-allowed";
+    document.getElementById("I07").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b07').click();
+  }
+  function a08() {
+    document.getElementById("I08").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I08").style.cursor = "not-allowed";
+    document.getElementById("I08").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b08').click();
+  }
+  function a09() {
+    document.getElementById("I09").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I09").style.cursor = "not-allowed";
+    document.getElementById("I09").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b09').click();
+  }
+  function a10() {
+    document.getElementById("I10").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I10").style.cursor = "not-allowed";
+    document.getElementById("I10").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b10').click();
+  }
+  function a11() {
+    document.getElementById("I11").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I11").style.cursor = "not-allowed";
+    document.getElementById("I11").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b11').click();
+  }
+  function a12() {
+    document.getElementById("I12").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I12").style.cursor = "not-allowed";
+    document.getElementById("I12").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b12').click();
+  }
+  function a13() {
+    document.getElementById("I13").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I13").style.cursor = "not-allowed";
+    document.getElementById("I13").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b13').click();
+  }
+  function a14() {
+    document.getElementById("I14").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I14").style.cursor = "not-allowed";
+    document.getElementById("I14").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b14').click();
+  }
+  function a15() {
+    document.getElementById("I15").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I15").style.cursor = "not-allowed";
+    document.getElementById("I15").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b15').click();
+  }
+  function a16() {
+    document.getElementById("I16").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I16").style.cursor = "not-allowed";
+    document.getElementById("I16").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b16').click();
+  }
+  function a17() {
+    document.getElementById("I17").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I17").style.cursor = "not-allowed";
+    document.getElementById("I17").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b17').click();
+  }
+  function a18() {
+    document.getElementById("I18").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I18").style.cursor = "not-allowed";
+    document.getElementById("I18").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b18').click();
+  }
+  function a19() {
+    document.getElementById("I19").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I19").style.cursor = "not-allowed";
+    document.getElementById("I19").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b19').click();
+  }
+  function a20() {
+    document.getElementById("I20").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I20").style.cursor = "not-allowed";
+    document.getElementById("I20").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b20').click();
+  }
+  function a21() {
+    document.getElementById("I21").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I21").style.cursor = "not-allowed";
+    document.getElementById("I21").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b21').click();
+  }
+  function a22() {
+    document.getElementById("I22").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I22").style.cursor = "not-allowed";
+    document.getElementById("I22").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b22').click();
+  }
+  function a23() {
+    document.getElementById("I23").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I23").style.cursor = "not-allowed";
+    document.getElementById("I23").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b23').click();
+  }
+  function a24() {
+    document.getElementById("I24").style.background = "rgba(255,0, 0, 1)";
+    document.getElementById("I24").style.cursor = "not-allowed";
+    document.getElementById("I24").style.filter = "grayscale(55%)";
+    document.getElementById('gameviewer').style.display = "inline-block";
+    document.getElementById('b24').click();
+  }
+  function back() {
+    document.getElementById('gameviewer').style.display = "none";
+    document.getElementById('b25').click();
+  }
+  var container = document.querySelector(".hoster2");
+  container.addEventListener('click', function (event) {
+    var img = document.getElementById('IMG2');
+    var up = document.getElementById('up2');
+    var x = event.clientX;
+    var y = event.clientY;
+    var ball = document.querySelector(".holder2");
+    img.style.display = "none";
+    up.style.display = "none";
+    img.style.display = "block";
+    up.style.display = "block";
+    ball.style.position = "absolute";
+    ball.style.left = `${x-15}px`;
+    ball.style.top = `${y-15}px`;
+    document.getElementById('IMG2').style.cursor = "default";
+    document.getElementById('IMG2').style.background = "transparent";
+    Y01 = y-15;
+    X01 = x-15;
+    document.getElementById('Y01').value = Y01;
+    document.getElementById('X01').value = X01;
+    var delayInMilliseconds = 900; //2.8 second
+
+    setTimeout(function() {
+      //your code to be executed after 2.8 second
+      img.style.display = "none";
+      up.style.display = "none";
+    }, delayInMilliseconds);
+  });
+  var dayd = setInterval(function() {
+  var ball = document.querySelector(".holder2");
+    var y = document.getElementById('Y01').value;
+    var x = document.getElementById('X01').value;
+    ball.style.position = "absolute";
+    ball.style.left = `${x}px`;
+    ball.style.top = `${y-2.5}px`;
+    Y01 = y-5; //riseing up with 25 px each
+    X01 = x;
+    document.getElementById('Y01').value = Y01;
+    document.getElementById('X01').value = X01;
+  }, 45);
+  </script>
+</html>
