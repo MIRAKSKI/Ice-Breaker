@@ -3,11 +3,15 @@
   <title>Ice Breaker</title>
 </head>
   <style>
-    html {
-      overflow: hidden;
-    }
     body {
-      overflow: hidden;
+      overflow: hidden;margin: 0px;height: 100%;width: 100%;
+      position: absolute;top: 50%;left: 50%;display: inline;
+      transform: translate(-50%,-50%);
+    }
+    html {
+      background: url("img/lee.jpg");background-position: center;
+      background-repeat: no-repeat;background-size: cover;
+      overflow: hidden;margin: 0px;padding: 0px;height: 100%;
     }
     img{
       padding: 0.5% 0.5%;
@@ -140,6 +144,24 @@
     </div>
   </body>
   <script>
+  var hg = document.getElementsByTagName('body')[0].offsetHeight;
+  var wg = document.getElementsByTagName('body')[0].offsetWidth;
+  var hgh = document.getElementById('I01').offsetHeight;
+  var wgh = document.getElementById('I01').offsetWidth;
+  var hgd = document.getElementsByTagName('html')[0].offsetHeight;
+  var wgd = document.getElementsByTagName('html')[0].offsetWidth;
+  const aspectt = 198/152;
+  if (wg>hg) {
+    var test = hgh * 4;
+    if (test>hgd) {
+      for (var i = 0; i < 25; i++) {
+        document.getElementsByTagName('img')[i].removeAttribute("width");
+        document.getElementsByTagName('img')[i].removeAttribute("height");
+        document.getElementsByTagName('img')[i].setAttribute("height", (hgd / 4.5));
+        document.getElementsByTagName('img')[i].setAttribute("width", ((hgd / 4)/aspectt));
+      }
+    }
+  }
   function a01() {
     document.getElementById("I01").style.background = "rgba(255,0, 0, 1)";
     document.getElementById("I01").style.cursor = "not-allowed";
@@ -312,8 +334,10 @@
     document.getElementById('gameviewer').style.display = "none";
     document.getElementById('b25').click();
   }
+  var actiontec;
   var container = document.querySelector(".hoster2");
   container.addEventListener('click', function (event) {
+    actiontec = 1;
     var img = document.getElementById('IMG2');
     var up = document.getElementById('up2');
     var x = event.clientX;
@@ -338,19 +362,22 @@
       //your code to be executed after 2.8 second
       img.style.display = "none";
       up.style.display = "none";
+      actiontec = 0;
     }, delayInMilliseconds);
   });
   var dayd = setInterval(function() {
-  var ball = document.querySelector(".holder2");
-    var y = document.getElementById('Y01').value;
-    var x = document.getElementById('X01').value;
-    ball.style.position = "absolute";
-    ball.style.left = `${x}px`;
-    ball.style.top = `${y-2.5}px`;
-    Y01 = y-5; //riseing up with 25 px each
-    X01 = x;
-    document.getElementById('Y01').value = Y01;
-    document.getElementById('X01').value = X01;
+    if (actiontec>0) {
+      var ball = document.querySelector(".holder2");
+      var y = document.getElementById('Y01').value;
+      var x = document.getElementById('X01').value;
+      ball.style.position = "absolute";
+      ball.style.left = `${x}px`;
+      ball.style.top = `${y-2.5}px`;
+      Y01 = y-5; //riseing up with 25 px each
+      X01 = x;
+      document.getElementById('Y01').value = Y01;
+      document.getElementById('X01').value = X01;
+    }
   }, 45);
   </script>
 </html>
