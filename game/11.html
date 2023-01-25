@@ -24,6 +24,10 @@
   width: 442px;
   height: 144px;
 }
+.numberbtn {
+  font-size: 125px;height: 100%;width: 32%;background: transparent;margin: 0px;
+  border: none;padding: 0px;color: rgba(00,120,220,0.3)
+}
 .lineh{
   background: black;
   border: none;
@@ -257,11 +261,23 @@ input:checked + .slider:before {
 <body>
   <div class="box">
   <div class="box1" style="position:fixed;">
-    <button class="esba1"></button>
+    <div class="esba1">
+      <input type="button" class="numberbtn" id="numberbtn01" value="1">
+      <input type="button" class="numberbtn" id="numberbtn02" value="2">
+      <input type="button" class="numberbtn" id="numberbtn03" value="3">
+    </div>
     <button class="lineh"></button>
-    <button class="esba1"></button>
+    <div class="esba1">
+      <input type="button" class="numberbtn" id="numberbtn04" value="4">
+      <input type="button" class="numberbtn" id="numberbtn05" value="5">
+      <input type="button" class="numberbtn" id="numberbtn06" value="6">
+    </div>
     <button class="lineh"></button>
-    <button class="esba1"></button>
+    <div class="esba1">
+      <input type="button" class="numberbtn" id="numberbtn07" value="7">
+      <input type="button" class="numberbtn" id="numberbtn08" value="8">
+      <input type="button" class="numberbtn" id="numberbtn09" value="9">
+    </div>
   </div>
   <div class="box2" style="position:fixed;">
     <button class="esba2"></button>
@@ -338,17 +354,20 @@ input:checked + .slider:before {
         if (flag == 1) {
           document.getElementById('bot1').value = "X";
           document.getElementById("bot1").disabled = true;
+          document.getElementById('numberbtn01').value = " ";
           flag = 0;
         }
         else {
           document.getElementById('bot1').value = "O";
           document.getElementById("bot1").disabled = true;
+          document.getElementById('numberbtn01').value = " ";
           flag = 1;
         }
       }
       else {
         document.getElementById('bot1').value = "X";
         document.getElementById("bot1").disabled = true;
+        document.getElementById('numberbtn01').value = " ";
       }
   }
   function a2(){
@@ -357,17 +376,20 @@ input:checked + .slider:before {
         if (flag == 1) {
           document.getElementById('bot2').value = "X";
           document.getElementById("bot2").disabled = true;
+          document.getElementById('numberbtn02').value = " ";
           flag = 0;
         }
         else {
           document.getElementById('bot2').value = "O";
           document.getElementById("bot2").disabled = true;
+          document.getElementById('numberbtn02').value = " ";
           flag = 1;
         }
         }
     else {
       document.getElementById('bot2').value = "X";
       document.getElementById("bot2").disabled = true;
+      document.getElementById('numberbtn02').value = " ";
     }
   }
   function a3(){
@@ -376,17 +398,20 @@ input:checked + .slider:before {
         if (flag == 1) {
           document.getElementById('bot3').value = "X";
           document.getElementById("bot3").disabled = true;
+          document.getElementById('numberbtn03').value = " ";
           flag = 0;
         }
         else {
           document.getElementById('bot3').value = "O";
           document.getElementById("bot3").disabled = true;
+          document.getElementById('numberbtn03').value = " ";
           flag = 1;
         }
         }
     else {
       document.getElementById('bot3').value = "X";
       document.getElementById("bot3").disabled = true;
+      document.getElementById('numberbtn03').value = " ";
     }
   }
   function a4(){
@@ -395,17 +420,20 @@ input:checked + .slider:before {
         if (flag == 1) {
           document.getElementById('bot4').value = "X";
           document.getElementById("bot4").disabled = true;
+          document.getElementById('numberbtn04').value = " ";
           flag = 0;
         }
         else {
           document.getElementById('bot4').value = "O";
           document.getElementById("bot4").disabled = true;
+          document.getElementById('numberbtn04').value = " ";
           flag = 1;
         }
         }
     else {
       document.getElementById('bot4').value = "X";
       document.getElementById("bot4").disabled = true;
+      document.getElementById('numberbtn04').value = " ";
     }
   }
   function a5(){
@@ -414,17 +442,20 @@ input:checked + .slider:before {
         if (flag == 1) {
           document.getElementById('bot5').value = "X";
           document.getElementById("bot5").disabled = true;
+          document.getElementById('numberbtn05').value = " ";
           flag = 0;
         }
         else {
           document.getElementById('bot5').value = "O";
           document.getElementById("bot5").disabled = true;
+          document.getElementById('numberbtn05').value = " ";
           flag = 1;
         }
         }
     else {
       document.getElementById('bot5').value = "X";
       document.getElementById("bot5").disabled = true;
+      document.getElementById('numberbtn05').value = " ";
     }
   }
   function a6(){
@@ -433,17 +464,20 @@ input:checked + .slider:before {
     if (flag == 1) {
       document.getElementById('bot6').value = "X";
       document.getElementById("bot6").disabled = true;
+      document.getElementById('numberbtn06').value = " ";
       flag = 0;
     }
     else {
       document.getElementById('bot6').value = "O";
       document.getElementById("bot6").disabled = true;
+      document.getElementById('numberbtn06').value = " ";
       flag = 1;
     }
     }
     else {
       document.getElementById('bot6').value = "X";
       document.getElementById("bot6").disabled = true;
+      document.getElementById('numberbtn06').value = " ";
     }
   }
   function a7(){
@@ -452,17 +486,20 @@ input:checked + .slider:before {
     if (flag == 1) {
       document.getElementById('bot7').value = "X";
       document.getElementById("bot7").disabled = true;
+      document.getElementById('numberbtn07').value = " ";
       flag = 0;
     }
     else {
       document.getElementById('bot7').value = "O";
       document.getElementById("bot7").disabled = true;
+      document.getElementById('numberbtn07').value = " ";
       flag = 1;
     }
     }
     else {
       document.getElementById('bot7').value = "X";
       document.getElementById("bot7").disabled = true;
+      document.getElementById('numberbtn07').value = " ";
     }
   }
   function a8(){
@@ -471,17 +508,20 @@ input:checked + .slider:before {
     if (flag == 1) {
       document.getElementById('bot8').value = "X";
       document.getElementById("bot8").disabled = true;
+      document.getElementById('numberbtn08').value = " ";
       flag = 0;
     }
     else {
       document.getElementById('bot8').value = "O";
       document.getElementById("bot8").disabled = true;
+      document.getElementById('numberbtn08').value = " ";
       flag = 1;
     }
     }
     else {
       document.getElementById('bot8').value = "X";
       document.getElementById("bot8").disabled = true;
+      document.getElementById('numberbtn08').value = " ";
     }
   }
   function a9(){
@@ -490,17 +530,20 @@ input:checked + .slider:before {
     if (flag == 1) {
       document.getElementById('bot9').value = "X";
       document.getElementById("bot9").disabled = true;
+      document.getElementById('numberbtn09').value = " ";
       flag = 0;
     }
     else {
       document.getElementById('bot9').value = "O";
       document.getElementById("bot9").disabled = true;
+      document.getElementById('numberbtn09').value = " ";
       flag = 1;
     }
     }
     else {
       document.getElementById('bot9').value = "X";
       document.getElementById("bot9").disabled = true;
+      document.getElementById('numberbtn09').value = " ";
     }
   }
 
@@ -644,6 +687,15 @@ input:checked + .slider:before {
     document.getElementById('bot7').value = tx3;
     document.getElementById('bot8').value = tx3;
     document.getElementById('bot9').value = tx3;
+    document.getElementById('numberbtn01').value = "1";
+    document.getElementById('numberbtn02').value = "2";
+    document.getElementById('numberbtn03').value = "3";
+    document.getElementById('numberbtn04').value = "4";
+    document.getElementById('numberbtn05').value = "5";
+    document.getElementById('numberbtn06').value = "6";
+    document.getElementById('numberbtn07').value = "7";
+    document.getElementById('numberbtn08').value = "8";
+    document.getElementById('numberbtn09').value = "9";
     document.getElementById('bot1').disabled = false;
     document.getElementById('bot2').disabled = false;
     document.getElementById('bot3').disabled = false;
